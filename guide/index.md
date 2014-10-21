@@ -72,10 +72,13 @@ https://github.com/Lax/iOS-Swift-Demos
 https://github.com/ipader/SwiftGuide
 Swiftist.org社区: https://swiftist.org
 Swift 文档生成工具: https://github.com/realm/jazzy
+ https://github.com/evnaz/ENSwiftSideMenu
 
 development
 https://puphpet.com
 
+git
+about github:https://github.com/gotgit/gotgithub
 
 others
   zeef.com
