@@ -79,12 +79,12 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: Light
+theme: flat
 exclude_generator:
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repository: https://github.com/taoanton/taoanton.github.io.git
+  repository: ssh://git@github.com/taoanton/taoanton.github.io.git
   branch: master
