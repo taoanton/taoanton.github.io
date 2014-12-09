@@ -1,0 +1,32 @@
+menu:
+  主页: /
+  归档: /archives
+  友链: /links
+  GitHub: https://github.com/reee
+  Twitter: https://twitter.com/_zzzh
+  关于我: /about-me
+
+widgets: 
+- search
+- category
+- tag
+
+excerpt_link: Read More
+
+twitter:
+  username: _zzzh
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics: UA-11520870-2
+rss:
