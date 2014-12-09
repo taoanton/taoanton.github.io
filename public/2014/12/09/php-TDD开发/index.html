@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>taoanton&#39;s blog</title>
+  <meta name="author" content="taoanton">
+  
+  <meta name="description" content="Write something">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="taoanton&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="taoanton&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">taoanton&#39;s blog</a></h1>
+  <h2><a href="/">Write something</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-12-09T09:50:03.000Z"><a href="/2014/12/09/php-TDD开发/">12月 9 2014</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="php_TDD">php TDD</h1>
+<h2 id="测试驱动开发">测试驱动开发</h2>
+<p>测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导先写测试程序，然后编码实现其功能得名。测试驱动开发始于20世纪90年代。测试驱动开发的目的是取得快速反馈并使用“illustrate the main line”方法来构建程序。</p>
+<p>测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和功能的实现；其后，驱动代码的再设计和重构。</p>
+<blockquote>
+<ul>
+<li>以上内容摘取自维基百科: <a href="http://zh.wikipedia.org/wiki/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91" target="_blank" rel="external">http://zh.wikipedia.org/wiki/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91</a></li>
+<li>书籍：测试驱动开发 <a href="http://book.douban.com/subject/25735501/" target="_blank" rel="external">http://book.douban.com/subject/25735501/</a></li>
+<li>练习：<a href="https://github.com/daylerees/test-driven-development-example" target="_blank" rel="external">https://github.com/daylerees/test-driven-development-example</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是测试驱动开发">什么是测试驱动开发</h2>
+<p>或许泥瓦匠的例子比较适合， 看一下泥瓦匠如何工作的吧</p>
+<blockquote>
+<p>工匠一:先拉上一根水平线，砌每一块砖时，都与这根水平线进行比较，使得每一块砖都保持水平。<br>工匠二:先将一排砖都砌完，然后拉上一根水平线，看看哪些砖有问题，再进行调整。  </p>
+</blockquote>
+<p><img src="./images/wall-line.jpg" alt="泥瓦匠"></p>
+<h2 id="phpunit">phpunit</h2>
+<p>PHPUnit是一个轻量级的PHP测试框架， 当前最新版本 PHPUnit 4.4.0</p>
+<blockquote>
+<ul>
+<li><a href="https://phpunit.de/" target="_blank" rel="external">https://phpunit.de/</a></li>
+</ul>
+</blockquote>
+<h3 id="安装_（linux）">安装 （linux）</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ wget https://phar.phpunit.de/phpunit.phar  </div><div class="line">$ chmod  +x phpunit.phar  </div><div class="line">$ <span class="built_in">sudo</span> mv phpunit.phar /usr/local/bin/phpunit</div></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>其他平台安装方式请参考PHPUnit手册第1章</li>
+</ul>
+</blockquote>
+<h3 id="命令行测试">命令行测试</h3>
+<p>一些简单的常用命令</p>
+<p>测试指定类</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> your-project-folder/</div><div class="line"></div><div class="line">phpunit --filter AdminLoginTest</div><div class="line">PHPUnit <span class="number">4.4</span>.<span class="number">0</span> by Sebastian Bergmann.</div><div class="line"></div><div class="line">Time: <span class="number">2.49</span> seconds, Memory: <span class="number">6.75</span>Mb</div><div class="line">OK (<span class="number">1</span> test, <span class="number">0</span> assertions)</div></pre></td></tr></table></figure>
+
+<p>测试指定类的方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit --filter AdminLoginTest::testAdminCheckLogin</div></pre></td></tr></table></figure>
+
+<p>测试指定的文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit --filter AdminLoginTest::testAdminCheckLogin</div></pre></td></tr></table></figure>
+
+<p>测试整个项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*更多命令行选项请参考PHPUnit手册第3章 命令行测试执行器</p>
+</blockquote>
+<h2 id="laravel_testing">laravel testing</h2>
+<p>laravel的测试扩展自PHPUnit</p>
+<blockquote>
+<ul>
+<li><a href="http://laravel.com/docs/4.2/testing" target="_blank" rel="external">http://laravel.com/docs/4.2/testing</a></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://taoanton.github.io/2014/12/09/php-TDD开发/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:taoanton.github.io">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 taoanton
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
