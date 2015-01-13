@@ -1,153 +1,608 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>taoanton&#39;s blog</title>
-  <meta name="author" content="taoanton">
-  
-  <meta name="description" content="Write something">
-  
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Write something">
+<meta property="og:type" content="website">
+<meta property="og:title" content="taoanton's blog">
+<meta property="og:url" content="http://taoanton.github.io/">
+<meta property="og:site_name" content="taoanton's blog">
+<meta property="og:description" content="Write something">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="taoanton's blog">
+<meta name="twitter:description" content="Write something">
 
   
-  <meta property="og:site_name" content="taoanton&#39;s blog"/>
-
+    <link rel="alternative" href="/atom.xml" title="taoanton&#39;s blog" type="application/atom+xml">
   
-    <meta property="og:image" content="undefined"/>
   
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="taoanton&#39;s blog" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="icon" href="/favicon.png">
   
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
 
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">taoanton&#39;s blog</a></h1>
-  <h2><a href="/">Write something</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">taoanton&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Write something</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="taoanton.github.io">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T09:50:03.000Z"><a href="/2014/12/09/php-TDD开发/">12月 9 2014</a></time>
-      
-      
+    <article id="post-satis-config" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/12/satis-config/" class="article-date">
+  <time datetime="2015-01-12T07:40:25.000Z" itemprop="datePublished">1月 12 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 class="title"><a href="/2014/12/09/php-TDD开发/"></a></h1>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/12/satis-config/">利用satis配置私有包</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="php_TDD">php TDD</h1>
-<h2 id="测试驱动开发">测试驱动开发</h2>
-<p>测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导先写测试程序，然后编码实现其功能得名。测试驱动开发始于20世纪90年代。测试驱动开发的目的是取得快速反馈并使用“illustrate the main line”方法来构建程序。</p>
-<p>测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和功能的实现；其后，驱动代码的再设计和重构。</p>
+        <p>Satis 是一个静态的 <code>composer</code> 代码库生成器, 可以用来处理私有资源包。  </p>
+<h2 id="install">install</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer.phar <span class="operator"><span class="keyword">create</span>-project composer/satis <span class="comment">--stability=dev</span></span></div></pre></td></tr></table></figure>
+
+<h2 id="配置">配置</h2>
+<p>新建配置文件 <code>satis.json</code>，设置公共库和私有库</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">    "<span class="attribute">name</span>": <span class="value"><span class="string">"My Repository"</span></span>,</div><div class="line">    "<span class="attribute">homepage</span>": <span class="value"><span class="string">"http://satis.yoursite.org/"</span></span>,</div><div class="line">    "<span class="attribute">repositories</span>": <span class="value">[</span></div><div class="line">        {</div><div class="line">            "<span class="attribute">type</span>": <span class="value"><span class="string">"vcs"</span></span>,</div><div class="line">            "<span class="attribute">url</span>": <span class="value"><span class="string">"ssh://root@yoursite/www/gitdata/test-satis.git"</span></span></div><div class="line">        },</div><div class="line">        { "<span class="attribute">type</span>": <span class="value"><span class="string">"vcs"</span></span>, "<span class="attribute">url</span>": <span class="value"><span class="string">"https://github.com/laravel/laravel.git"</span></span>},</div><div class="line">        { "<span class="attribute">type</span>": <span class="value"><span class="string">"vcs"</span></span>, "<span class="attribute">url</span>": <span class="value"><span class="string">"https://github.com/padraic/mockery.git"</span></span>},</div><div class="line">    ],</div><div class="line">    "<span class="attribute">require-all</span>": <span class="value"><span class="literal">true</span></span></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>完成配置通过以下命令生产项目 <code>php bin/satis build &lt;configuration file&gt; &lt;build dir&gt;</code>.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php bin<span class="regexp">/satis build satis.json web/</span></div></pre></td></tr></table></figure>
+
+<p>设置一个虚拟目录指向 web/ 目录, 假设绑定的域名是<a href="http://satis.yoursite.org。访问这个域名可以看到已经生成的包列表" target="_blank" rel="external">http://satis.yoursite.org。访问这个域名可以看到已经生成的包列表</a></p>
+<blockquote>
+<p>注：每次更新包文件，都需要重新运行命令更新包列表</p>
+</blockquote>
+<p>资源包介绍</p>
+<blockquote>
+<p><a href="https://getcomposer.org/doc/05-repositories.md" target="_blank" rel="external">https://getcomposer.org/doc/05-repositories.md</a></p>
+</blockquote>
+<h2 id="使用">使用</h2>
+<p>新建<code>composer.json</code>, 内容如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">    "<span class="attribute">name</span>": <span class="value"><span class="string">"project/test-satis"</span></span>,</div><div class="line">    "<span class="attribute">type</span>": <span class="value"><span class="string">"project"</span></span>,</div><div class="line">    "<span class="attribute">require</span>": <span class="value">{</span></div><div class="line">        "<span class="attribute">taoanton/tinyframework</span>": <span class="value"><span class="string">"0.2.0"</span></span>,</div><div class="line">        "<span class="attribute">mockery/mockery</span>": <span class="value"><span class="string">"0.7.*"</span></span>,</div><div class="line">        "<span class="attribute">maxrocky/test-satis</span>": <span class="value"><span class="string">"v0.2.2"</span></span></div><div class="line">    },</div><div class="line">    "<span class="attribute">minimum-stability</span>": <span class="value"><span class="string">"dev"</span></span>,</div><div class="line">    "<span class="attribute">repositories</span>": <span class="value">[</span></div><div class="line">        {</div><div class="line">            "<span class="attribute">type</span>": <span class="value"><span class="string">"composer"</span></span>,</div><div class="line">            "<span class="attribute">url</span>": <span class="value"><span class="string">"http://satis.yoursite.org/"</span></span></div><div class="line">        },</div><div class="line">        {"<span class="attribute">packagist</span>": <span class="value"><span class="literal">false</span></span>}</div><div class="line">    ]</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>运行<code>composer install</code> 安装依赖包</p>
+<p>更多详细内容</p>
 <blockquote>
 <ul>
-<li>以上内容摘取自维基百科: <a href="http://zh.wikipedia.org/wiki/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91" target="_blank" rel="external">http://zh.wikipedia.org/wiki/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91</a></li>
-<li>书籍：测试驱动开发 <a href="http://book.douban.com/subject/25735501/" target="_blank" rel="external">http://book.douban.com/subject/25735501/</a></li>
-<li>练习：<a href="https://github.com/daylerees/test-driven-development-example" target="_blank" rel="external">https://github.com/daylerees/test-driven-development-example</a></li>
-</ul>
-</blockquote>
-<h2 id="什么是测试驱动开发">什么是测试驱动开发</h2>
-<p>或许泥瓦匠的例子比较适合， 看一下泥瓦匠如何工作的吧</p>
-<blockquote>
-<p>工匠一:先拉上一根水平线，砌每一块砖时，都与这根水平线进行比较，使得每一块砖都保持水平。<br>工匠二:先将一排砖都砌完，然后拉上一根水平线，看看哪些砖有问题，再进行调整。  </p>
-</blockquote>
-<p><img src="./images/wall-line.jpg" alt="泥瓦匠"></p>
-<h2 id="phpunit">phpunit</h2>
-<p>PHPUnit是一个轻量级的PHP测试框架， 当前最新版本 PHPUnit 4.4.0</p>
-<blockquote>
-<ul>
-<li><a href="https://phpunit.de/" target="_blank" rel="external">https://phpunit.de/</a></li>
-</ul>
-</blockquote>
-<h3 id="安装_（linux）">安装 （linux）</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ wget https://phar.phpunit.de/phpunit.phar  </div><div class="line">$ chmod  +x phpunit.phar  </div><div class="line">$ <span class="built_in">sudo</span> mv phpunit.phar /usr/local/bin/phpunit</div></pre></td></tr></table></figure>
-
-<blockquote>
-<ul>
-<li>其他平台安装方式请参考PHPUnit手册第1章</li>
-</ul>
-</blockquote>
-<h3 id="命令行测试">命令行测试</h3>
-<p>一些简单的常用命令</p>
-<p>测试指定类</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> your-project-folder/</div><div class="line"></div><div class="line">phpunit --filter AdminLoginTest</div><div class="line">PHPUnit <span class="number">4.4</span>.<span class="number">0</span> by Sebastian Bergmann.</div><div class="line"></div><div class="line">Time: <span class="number">2.49</span> seconds, Memory: <span class="number">6.75</span>Mb</div><div class="line">OK (<span class="number">1</span> test, <span class="number">0</span> assertions)</div></pre></td></tr></table></figure>
-
-<p>测试指定类的方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit --filter AdminLoginTest::testAdminCheckLogin</div></pre></td></tr></table></figure>
-
-<p>测试指定的文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit --filter AdminLoginTest::testAdminCheckLogin</div></pre></td></tr></table></figure>
-
-<p>测试整个项目</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit</div></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*更多命令行选项请参考PHPUnit手册第3章 命令行测试执行器</p>
-</blockquote>
-<h2 id="laravel_testing">laravel testing</h2>
-<p>laravel的测试扩展自PHPUnit</p>
-<blockquote>
-<ul>
-<li><a href="http://laravel.com/docs/4.2/testing" target="_blank" rel="external">http://laravel.com/docs/4.2/testing</a></li>
+<li><a href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md" target="_blank" rel="external">https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md</a></li>
 </ul>
 </blockquote>
 
       
     </div>
-    <footer>
+    <footer class="article-footer">
       
-        
-        
+        <a data-url="http://taoanton.github.io/2015/01/12/satis-config/" data-id="6ghwr178401xv4c3" class="article-share-link" data-share="baidu">分享到</a>
       
-      <div class="clearfix"></div>
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer-satis/">composer satis</a></li></ul>
+
     </footer>
   </div>
+  
 </article>
 
 
+  
+    <article id="post-php-TDD开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/20/php-TDD开发/" class="article-date">
+  <time datetime="2014-12-20T07:45:11.000Z" itemprop="datePublished">12月 20 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/20/php-TDD开发/">PHP测试驱动开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="php_测试驱动开发_TDD">php 测试驱动开发 TDD</h1>
+<h2 id="测试驱动开发">测试驱动开发</h2>
+<p>测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导先写测试程序，然后编码实现其功能得名。测试驱动开发始于20世纪90年代。测试驱动开发的目的是取得快速反馈并使用“illustrate the main line”方法来构建程序。</p>
+<h2 id="TDD的目标">TDD的目标</h2>
+<p><code>Clean Code That Works</code></p>
+<p>这句话的含义是，事实上我们只做两件事情：让代码奏效（Work）和让代码洁净（Clean），前者是把事情做对，后者是把事情做好。想想看，其实 我们平时所做的所有工作，除去无用的工作和错误的工作以外，真正正确的工作，并且是真正有意义的工作，其实也就只有两大类：增加功能和提升设计，而TDD 正是在这个原则上产生的。如果您的工作并非我们想象的这样，（这意味着您还存在第三类正确有意义的工作，或者您所要做的根本和我们在说的是两回事），那么 这告诉我们您并不需要TDD，或者不适用TDD。而如果我们偶然猜对（这对于我来说是偶然，而对于Kent Beck和Martin Fowler这样的大师来说则是辛勤工作的成果），那么恭喜您，TDD有可能成为您显著提升工作效率的一件法宝。请不要将信将疑，若即若离，因为任何一项 新的技术——只要是从根本上改变人的行为方式的技术——就必然使得相信它的人越来越相信，不信的人越来越不信。这就好比学游泳，唯一能学会游泳的途径就是 亲自下去游，除此之外别无他法。这也好比成功学，即使把卡耐基或希尔博士的书倒背如流也不能拥有积极的心态，可当你以积极的心态去成就了一番事业之后，你 就再也离不开它了。相信我，TDD也是这样！想试用TDD的人们，请遵循下面的步骤：</p>
+<h2 id="TDD的优点">TDD的优点</h2>
+<p>『充满吸引力的优点』</p>
+<p>1.完工时完工。表明我可以很清楚的看到自己的这段工作已经结束了，而传统的方式很难知道什么时候编码工作结束了。<br>2.全面正确的认识代码和利用代码，而传统的方式没有这个机会。<br>3.为利用你成果的人提供Sample，无论它是要利用你的源代码，还是直接重用你提供的组件。<br>4.开发小组间降低了交流成本，提高了相互信赖程度。<br>5.避免了过渡设计。<br>6.系统可以与详尽的测试集一起发布，从而对程序的将来版本的修改和扩展提供方便。<br>7.TDD给了我们自信，让我们今天的问题今天解决，明天的问题明天解决，今天不能解决明天的问题   ，因为明天的问题还没有出现(没有TestCase)，除非有TestCase否则我决不写任何代码；明天也不必担心今天的问题，只要我亮了绿灯。  </p>
+<p>『不显而易见的优点』</p>
+<p>8.逃避了设计角色。对于一个敏捷的开发小组，每个人都在做设计。<br>9.大部分时间代码处在高质量状态，100％的时间里成果是可见的。<br>10.由于可以保证编写测试和编写代码的是相同的程序员，降低了理解代码所花费的成本。<br>11.为减少文档和代码之间存在的细微的差别和由这种差别所引入的Bug作出杰出贡献。<br>12.在预先设计和紧急设计之间建立一种平衡点，为你区分哪些设计该事先做、哪些设计该迭代时做提供了一个可靠的判断依据。</p>
+<p>『有争议的优点』</p>
+<p>13.事实上提高了开发效率。每一个正在使用TDD并相信TDD的人都会相信这一点，但观望者则不同，不相信TDD的人甚至坚决反对这一点，这很正常，世界总是这样。<br>14.发现比传统测试方式更多的Bug。<br>15.使IDE的调试功能失去意义，或者应该说，避免了令人头痛的调试和节约了调试的时间。<br>16.总是处在要么编程要么重构的状态下，不会使人抓狂。（两顶帽子）<br>17.单元测试非常有趣。</p>
+<p>TDD的步骤</p>
+<blockquote>
+<ul>
+<li>编写TestCase    —&gt;    实现TestCase    —&gt;    重构</li>
+<li>（不可运行） &nbsp; &nbsp; &nbsp; &nbsp;（可运行）      &nbsp;    &nbsp; &nbsp; （重构）</li>
+</ul>
+</blockquote>
+<p>步骤:</p>
+<table><br>  <tr><br>    <td>(1) 快速新增一个测试用例    </td><br>    <td>新的TestCase</td><br>  </tr><br>  <tr><br>    <td>(2) 编译所有代码，刚刚写的那个测试很可能编译不通过</td><br>    <td>原始的TODO List</td><br>  </tr><br>  <tr><br>    <td>(3) 做尽可能少的改动，让编译通过</td><br>    <td>Interface</td><br>  </tr><br>  <tr><br>    <td>(4) 运行所有的测试，发现最新的测试不能编译通过</td><br>    <td>－(Red Bar) </td><br>  </tr><br>  <tr><br>    <td>(5) 做尽可能少的改动，让测试通过    </td><br>    <td>Implementation</td><br>  </tr><br>  <tr><br>    <td>(6) 运行所有的测试，保证每个都能通过    </td><br>    <td>－(Green Bar)   </td><br>  </tr><br>  <tr><br>    <td>(7) 重构代码，以消除重复设计    </td><br>    <td>Clean Code That Works  </td><br>  </tr><br></table>
 
 
-  <article class="post">
+<p>书籍：</p>
+<blockquote>
+<p> 测试驱动开发 <a href="http://book.douban.com/subject/25735501/" target="_blank" rel="external">http://book.douban.com/subject/25735501/</a></p>
+</blockquote>
+<p>练习：</p>
+<blockquote>
+<p> <a href="https://github.com/daylerees/test-driven-development-example" target="_blank" rel="external">https://github.com/daylerees/test-driven-development-example</a></p>
+</blockquote>
+<h2 id="phpunit">phpunit</h2>
+<p>PHPUnit是一个轻量级的PHP测试框架， 当前最新版本 PHPUnit 4.4.0</p>
+<blockquote>
+<p> <a href="https://phpunit.de/" target="_blank" rel="external">https://phpunit.de/</a></p>
+</blockquote>
+<h3 id="安装_（linux）">安装 （linux）</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ wget https://phar.phpunit.de/phpunit.phar  </div><div class="line">$ chmod  +x phpunit.phar  </div><div class="line">$ <span class="built_in">sudo</span> mv phpunit.phar /usr/local/bin/phpunit</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 其他平台安装方式请参考PHPUnit手册第1章</p>
+</blockquote>
+<p>phpunit默认的执行指定目录下*Test.php文件中的测试用例，并且是迭代的遍历所有子目录。phpunit命令提供了一些可选参数，可以使得批量处理Test Case变得容易。</p>
+<h3 id="命令行测试">命令行测试</h3>
+<p>一些简单的常用命令</p>
+<p>测试指定的目录下*Test.php文件中的测试用例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit tests</div></pre></td></tr></table></figure>
+
+<p>如果你希望更细粒度的控制执行特定用例，可以使用“—filter”参数<br>测试指定类</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">phpunit --filter ClassNameTest</div><div class="line">PHPUnit <span class="number">4.4</span>.<span class="number">0</span> by Sebastian Bergmann.</div><div class="line"></div><div class="line">Time: <span class="number">2.49</span> seconds, Memory: <span class="number">6.75</span>Mb</div><div class="line">OK (<span class="number">1</span> test, <span class="number">0</span> assertions)</div></pre></td></tr></table></figure>
+
+<p>测试指定类的方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit --filter ClassNameTest::testClassMethod</div></pre></td></tr></table></figure>
+
+<p>测试整个项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpunit</div></pre></td></tr></table></figure>
+
+<p>测试并生成代码覆盖率文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-coverage-clover &lt;file&gt;</span>  生成带有代码覆盖率信息的 <span class="constant">XML</span> 格式的日志文件.</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-coverage-crap4j &lt;file&gt;</span>  生成 <span class="constant">Crap4j</span> 格式的代码覆盖率报告.</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-coverage-html &lt;dir&gt;</span>     生成 <span class="constant">HTML</span> 格式的代码覆盖率报告.</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-coverage-php &lt;file&gt;</span>     生成一个序列化后的 <span class="constant">PHP_CodeCoverage</span> 对象，此对象含有代码覆盖率信息.</span></span></div><div class="line">-<span class="ruby">-coverage-text=&lt;file&gt; 生成带有代码覆盖率信息的日志文件或命令行输出</span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-coverage-xml &lt;dir&gt;</span>      生成带有代码覆盖率信息的 <span class="constant">XML</span> 格式的日志文件.</span></span></div></pre></td></tr></table></figure>
+
+<p>测试结果</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-log-junit  &lt;file&gt;</span> 为运行的测试生成 <span class="constant">JUnit</span> <span class="constant">XML</span> 格式的日志文件。</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-log-tap  &lt;file&gt;</span> 为运行的测试生成(<span class="constant">TAP</span>) 格式的日志文件。</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-log-json  &lt;file&gt;</span> 生成 <span class="constant">JSON</span> 格式的日志文件。</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-testdox-html &lt;file&gt;</span> 为运行的测试生成<span class="constant">HTML</span>格式的日志文件</span></span></div><div class="line">-<span class="ruby"><span class="input"><span class="prompt">-testdox-text &lt;file&gt;</span> 为运行的测试生成纯文本格式的日志文件</span></span></div><div class="line"></div><div class="line">phpunit --coverage-html coverage-html --testdox-html test-result</div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>更多命令行选项请参考PHPUnit手册第3章 命令行测试执行器</p>
+</blockquote>
+<h2 id="phpunit断言">phpunit断言</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">布尔类型</div><div class="line">assertTrue   断言为真</div><div class="line">assertFalse  断言为假</div><div class="line"></div><div class="line"><span class="built_in">NULL</span>类型</div><div class="line">assertNull     断言为<span class="built_in">NULL</span></div><div class="line">assertNotNull  断言非<span class="built_in">NULL</span></div><div class="line"></div><div class="line">数字类型</div><div class="line">assertEquals             断言等于</div><div class="line">assertNotEquals          断言不等于</div><div class="line">assertGreaterThan        断言大于</div><div class="line">assertGreaterThanOrEqual 断言大于等于</div><div class="line">assertLessThan           断言小于</div><div class="line">assertLessThanOrEqual    断言小于等于</div><div class="line"></div><div class="line">字符类型</div><div class="line">assertEquals          断言等于</div><div class="line">assertNotEquals       断言不等于</div><div class="line">assertContains        断言包含</div><div class="line">assertNotContains     断言不包含</div><div class="line">assertContainsOnly    断言只包含</div><div class="line">assertNotContainsOnly 断言不只包含</div><div class="line"></div><div class="line">数组类型</div><div class="line">assertEquals          断言等于</div><div class="line">assertNotEquals       断言不等于</div><div class="line">assertArrayHasKey     断言有键</div><div class="line">assertArrayNotHasKey  断言没有键</div><div class="line">assertContains        断言包含</div><div class="line">assertNotContains     断言不包含</div><div class="line">assertContainsOnly    断言只包含</div><div class="line">assertNotContainsOnly 断言不只包含</div><div class="line"></div><div class="line">对象类型</div><div class="line">assertAttributeContains           断言属性包含</div><div class="line">assertAttributeContainsOnly       断言属性只包含</div><div class="line">assertAttributeEquals             断言属性等于</div><div class="line">assertAttributeGreaterThan        断言属性大于</div><div class="line">assertAttributeGreaterThanOrEqual 断言属性大于等于</div><div class="line">assertAttributeLessThan           断言属性小于</div><div class="line">assertAttributeLessThanOrEqual    断言属性小于等于</div><div class="line">assertAttributeNotContains        断言不包含</div><div class="line">assertAttributeNotContainsOnly    断言属性不只包含</div><div class="line">assertAttributeNotEquals          断言属性不等于</div><div class="line">assertAttributeNotSame            断言属性不相同</div><div class="line">assertAttributeSame               断言属性相同</div><div class="line">assertSame                        断言类型和值都相同</div><div class="line">assertNotSame                     断言类型或值不相同</div><div class="line">assertObjectHasAttribute          断言对象有某属性</div><div class="line">assertObjectNotHasAttribute       断言对象没有某属性</div><div class="line"></div><div class="line">class类型</div><div class="line">class类型包含对象类型的所有断言，还有</div><div class="line">assertClassHasAttribute          断言类有某属性</div><div class="line">assertClassHasStaticAttribute    断言类有某静态属性</div><div class="line">assertClassNotHasAttribute       断言类没有某属性</div><div class="line">assertClassNotHasStaticAttribute 断言类没有某静态属性</div><div class="line"></div><div class="line">文件相关</div><div class="line">assertFileEquals     断言文件内容等于</div><div class="line">assertFileExists     断言文件存在</div><div class="line">assertFileNotEquals  断言文件内容不等于</div><div class="line">assertFileNotExists  断言文件不存在</div><div class="line"></div><div class="line"><span class="built_in">XML</span>相关</div><div class="line">assertXmlFileEqualsXmlFile        断言<span class="built_in">XML</span>文件内容相等</div><div class="line">assertXmlFileNotEqualsXmlFile     断言<span class="built_in">XML</span>文件内容不相等</div><div class="line">assertXmlStringEqualsXmlFile      断言<span class="built_in">XML</span>字符串等于<span class="built_in">XML</span>文件内容</div><div class="line">assertXmlStringEqualsXmlString    断言<span class="built_in">XML</span>字符串相等</div><div class="line">assertXmlStringNotEqualsXmlFile   断言<span class="built_in">XML</span>字符串不等于<span class="built_in">XML</span>文件内容</div><div class="line">assertXmlStringNotEqualsXmlString 断言<span class="built_in">XML</span>字符串不相等</div></pre></td></tr></table></figure>
+
+<h2 id="laravel断言">laravel断言</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">assertResponseOk  Assert回应为OK</div><div class="line">assertResponseStatus(<span class="number">403</span>) Assert 回应状态码</div><div class="line"></div><div class="line">Assert 回应为重定向</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertRedirectedTo</span>(<span class="string">'foo'</span>);</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertRedirectedToRoute</span>(<span class="string">'route.name'</span>);</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertRedirectedToAction</span>(<span class="string">'Controller@method'</span>);</div><div class="line"></div><div class="line">Assert 回应带数据的视图</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertViewHas</span>(<span class="string">'name'</span>);</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertViewHas</span>(<span class="string">'age'</span>, <span class="variable">$value</span>);</div><div class="line"></div><div class="line">Assert 回应带数据的 Session</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertSessionHas</span>(<span class="string">'name'</span>);</div><div class="line"><span class="variable">$this</span><span class="variable">-&gt;assertSessionHas</span>(<span class="string">'age'</span>, <span class="variable">$value</span>);</div></pre></td></tr></table></figure>
+
+<h2 id="测试替身_Mock">测试替身 Mock</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testBit</span><span class="params">()</span></span>{</div><div class="line">  <span class="variable">$oClientMock</span> = <span class="variable">$this</span><span class="variable">-&gt;getMock</span>(<span class="string">'SomeClient'</span>); <span class="comment">// 创建mock对象</span></div><div class="line"></div><div class="line">  <span class="variable">$oClientMock</span><span class="variable">-&gt;expects</span>(<span class="variable">$this</span><span class="variable">-&gt;once</span>()) <span class="comment">// 设定次数</span></div><div class="line"></div><div class="line">  <span class="variable">-&gt;method</span>(<span class="string">'ExecuteCommand'</span>) <span class="comment">// 设定方法</span></div><div class="line"></div><div class="line">  <span class="variable">-&gt;with</span>(CPU_BIT_CMD) <span class="comment">// 设定方法入参</span></div><div class="line"></div><div class="line">  <span class="variable">-&gt;will</span>(<span class="variable">$this</span><span class="variable">-&gt;returnValue</span>(<span class="string">'some'</span>)); <span class="comment">// 设定方法返回值</span></div><div class="line"></div><div class="line">  <span class="variable">$oHardware</span> = <span class="keyword">new</span> MHardware(<span class="variable">$oClientMock</span>);</div><div class="line"></div><div class="line">  <span class="variable">$this</span><span class="variable">-&gt;assertEquals</span>(<span class="string">'32'</span>, <span class="variable">$oHardware</span><span class="variable">-&gt;CpuBit</span>()); <span class="comment">// 调用方法并断言</span></div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<h3 id="使用mock一般有下面几步：">使用mock一般有下面几步：</h3>
+<blockquote>
+<p>getMock 创建mock对象（必须有）<br>method 设置期望调用的方法（必须有）<br>expects 设置方法调用的次数（必须有）<br>with 设置调用方法时的入参（可选）<br>will 设置调用方法后的返回值（可选）  </p>
+</blockquote>
+<h3 id="getMock函数签名详解">getMock函数签名详解</h3>
+<p>getMock有7个参数，一般只需要使用第一个参数指定被mock的类即可，但是如果需要更灵活的配置mock，有必要了解其他参数：</p>
+<p>String – Required – 需要mock的类的名称<br>Array – Optional – 需要mock的函数名称数组，默认情况下，会mock所有函数（即给所有函数一个空的实现），但是如果设置了需要mock的函数，那么其他函数将不会被mock，按照原来的方式执行。<br>Array – Optional – 需要传入给构造函数的参数，getMock方法帮你调用了构造函数，所以这里通过一个数组，给你设置构造函数参数的机会<br>String – Optional – 给这个mock类起一个名称，这样可以使用这个新名称创建许多同样的mock类实例。<br>Boolean – Optional – true将调用原始对象的构造函数，false将不掉用，默认为true<br>Boolean – Optional – true将可以调用原始类的clone函数，false则无法调用。<br>Boolean – Optional – false将禁止__autoload函数被调用，当mock对象被创建时。</p>
+<h3 id="匹配器（Matchers）">匹配器（Matchers）</h3>
+<p>匹配器相当于调用mock方法的量词，作为expects函数的参数传给mock对象，用于设定期望的调用次数，主要有下面几个：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function">once</span>() 期望方法只调用一次，否则测试失败</div><div class="line"></div><div class="line"><span class="function">never</span>() 期望方法从不被调用，否则测试失败</div><div class="line"></div><div class="line"><span class="function">any</span>() 期望调用任意次，测试永远不会因此失败。</div><div class="line"></div><div class="line"><span class="function">at</span>(<span class="variable">$index</span>) 期望方法被第<span class="variable">$indexd</span>调用的行为，<span class="variable">$index</span>从0开始，一般会配合with或will使用。值得注意的是<span class="variable">$index</span>是针对特定mock对象而言的，而不是针对特定mock对象的特定方法。也就是说，mock对象<span class="tag">A</span>任意一个方法被调用一次，<span class="variable">$index</span>会增加1。</div><div class="line"></div><div class="line"><span class="function">exactly</span>(<span class="variable">$times</span>) 期望执行准确的次数，否则测试失败</div><div class="line"></div><div class="line"><span class="function">atLeastOnce</span>() 期望执行至少一次，否则测试失败</div></pre></td></tr></table></figure>
+
+<h3 id="约束（Constraints）">约束（Constraints）</h3>
+<p>约束和with一起使用，用于设定mock函数的输入，约束有很多，主要分为一下几大类</p>
+<p>[数组]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">arrayHasKey</span>(mixed <span class="variable">$key</span>) 断言入参数组是否有指定的键</div><div class="line"></div><div class="line"><span class="function">contains</span>(mixed <span class="variable">$value</span>) 断言入参数组是否有指定的值</div></pre></td></tr></table></figure>
+
+<p>[逻辑]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">logicalAnd</span>(<span class="variable">$constraint</span>,<span class="variable">$constraint</span>) 断言两个参数逻辑和</div><div class="line"></div><div class="line"><span class="function">logicalNot</span>(<span class="variable">$constraint</span>) 断言参数逻辑否</div><div class="line"></div><div class="line"><span class="function">logicalOr</span>(<span class="variable">$constraint</span>,<span class="variable">$constraint</span>) 断言两个参数逻辑或</div><div class="line"></div><div class="line"><span class="function">logicalXor</span>(<span class="variable">$constraint</span>,<span class="variable">$constraint</span>) 断言两个逻辑异或</div></pre></td></tr></table></figure>
+
+<p>[字符串]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">matchesRegularExpression</span>(<span class="variable">$pattern</span>) 断言入参是否匹配正则表达式</div><div class="line"></div><div class="line"><span class="function">stringContains</span>(<span class="variable">$string</span>, <span class="variable">$case</span>) 断言入参是否包含表达式</div><div class="line"></div><div class="line"><span class="function">stringEndsWith</span>( <span class="variable">$suffix</span>) 断言入参是否有此后缀</div><div class="line"></div><div class="line"><span class="function">stringStartsWith</span>(string <span class="variable">$prefix</span>) 断言入参是否有次前缀</div></pre></td></tr></table></figure>
+
+<p>[比较]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">identicalTo(<span class="variable">$value</span>) 断言入参===当前值</div><div class="line"></div><div class="line">equalTo(<span class="variable">$value</span>, <span class="variable">$delta</span> = <span class="number">0</span>, <span class="variable">$maxDepth</span> = <span class="number">10</span>) 断言入菜是否==当前值</div><div class="line"></div><div class="line">lessThan(<span class="variable">$value</span>) 断言入参&lt;当前值</div><div class="line"></div><div class="line">lessThanOrEqual(mixed <span class="variable">$value</span>) 断言入参&lt;=当前值</div><div class="line"></div><div class="line">greaterThan(mixed <span class="variable">$value</span>) 断言入参&gt;当前值</div><div class="line"></div><div class="line">greaterThanOrEqual(mixed <span class="variable">$value</span>) 断言入参&gt;=当前值</div></pre></td></tr></table></figure>
+
+<p>[类和对象]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">attribute(<span class="variable">$constraint</span>, <span class="variable">$attributeName</span>) 将约束赋给指定属性或对象</div><div class="line"></div><div class="line">attributeEqualTo(<span class="variable">$attributeName</span>, <span class="variable">$value</span>, <span class="variable">$delta</span> = <span class="number">0</span>, <span class="variable">$maxDepth</span> = <span class="number">10</span>) 断言value是否与当前对象的某个属性相等</div><div class="line"></div><div class="line">classHasAttribute(<span class="variable">$attributeName</span>) 断言当前类是否具有摸个属性</div><div class="line"></div><div class="line">classHasStaticAttribute(<span class="variable">$attributeName</span>) 断言当前类是否具有某个静态属性</div><div class="line"></div><div class="line">hasAttribute(<span class="variable">$attributeName</span>) 断言当前对象是否有指定的属性</div></pre></td></tr></table></figure>
+
+<p>[基本类型]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function">isFalse</span>() 断言当前值为FALSE</div><div class="line"></div><div class="line"><span class="function">isTrue</span>() 断言当前对象是否为TRUE</div><div class="line"></div><div class="line"><span class="function">isInstanceOf</span>(string <span class="variable">$className</span>) 断言当对象是某个类的实例</div><div class="line"></div><div class="line"><span class="function">isNull</span>() 断言当前对象是否为NULL</div><div class="line"></div><div class="line"><span class="function">isType</span>(<span class="variable">$type</span>) 断言当前对象是某个具体的类型</div></pre></td></tr></table></figure>
+
+<p>[其他]</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">anything</span><span class="params">()</span> 接受任何入参</span></div><div class="line"></div><div class="line"><span class="title">fileExists</span><span class="params">()</span> 断言当前入参代表的文件是否存在</div></pre></td></tr></table></figure>
+
+<h3 id="返回">返回</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">设定返回值，与will一起使用，用于设定mock函数的返回值，主要方法方法如下：</div><div class="line"></div><div class="line"><span class="function">returnValue</span>(<span class="variable">$value</span>) 返回字面意思</div><div class="line"></div><div class="line"><span class="function">throwException</span>(<span class="variable">$exception</span>) 此方法在调用时抛出指定异常</div><div class="line"></div><div class="line"><span class="function">returnArgument</span>(<span class="variable">$index</span>) 返回第<span class="variable">$index</span>个参数，从0开始</div><div class="line"></div><div class="line"><span class="function">returnCallback</span>(<span class="variable">$fun</span>) 返回值通过回调函数生成,函数签名与被mock的函数相同</div><div class="line"></div><div class="line"><span class="function">onConsecutiveCalls</span>(arg0,arg1,…) 设定返回值列表，这样可以控制被返回值的顺序，更灵活的控制返回值，最好与匹配器any或atLeastOnce结合使用。</div></pre></td></tr></table></figure>
+
+<h2 id="phpunit_xml配置文件">phpunit xml配置文件</h2>
+<p><phpunit> 元素的属性用于配置 PHPUnit 的核心功能</phpunit></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?xml <span class="variable">version=</span><span class="string">"1.0"</span> <span class="variable">encoding=</span><span class="string">"UTF-8"</span>?&gt;</div><div class="line">&lt;phpunit <span class="variable">backupGlobals=</span><span class="string">"false"</span></div><div class="line">          <span class="variable">backupStaticAttributes=</span><span class="string">"false"</span></div><div class="line">          <span class="variable">bootstrap=</span><span class="string">"bootstrap/autoload.php"</span></div><div class="line">          <span class="variable">colors=</span><span class="string">"true"</span></div><div class="line">          <span class="variable">convertErrorsToExceptions=</span><span class="string">"true"</span></div><div class="line">          <span class="variable">convertNoticesToExceptions=</span><span class="string">"true"</span></div><div class="line">          <span class="variable">convertWarningsToExceptions=</span><span class="string">"true"</span></div><div class="line">          <span class="variable">processIsolation=</span><span class="string">"false"</span></div><div class="line">          <span class="variable">stopOnFailure=</span><span class="string">"false"</span></div><div class="line">          <span class="variable">syntaxCheck=</span><span class="string">"false"</span></div><div class="line">          &gt;</div><div class="line">&lt;/phpunit&gt;</div></pre></td></tr></table></figure>
+
+<p>测试套件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">testsuites</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">testsuite</span> <span class="attribute">name</span>=<span class="value">"Application Test Suite"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">directory</span>&gt;</span>./tests/<span class="tag">&lt;/<span class="title">directory</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">testsuite</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">testsuites</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>包含或排除文件</p>
+<p><filter> 元素及其子元素用于配置代码覆盖率报告的黑名单与白名单</filter></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">filter</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">blacklist</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">directory</span> <span class="attribute">suffix</span>=<span class="value">".php"</span>&gt;</span>./vendor<span class="tag">&lt;/<span class="title">directory</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">directory</span> <span class="attribute">suffix</span>=<span class="value">".php"</span>&gt;</span>./bootstrap<span class="tag">&lt;/<span class="title">directory</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">blacklist</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">whitelist</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">directory</span> <span class="attribute">suffix</span>=<span class="value">".php"</span>&gt;</span>app<span class="tag">&lt;/<span class="title">directory</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">whitelist</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">filter</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>日志记录</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">logging</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--代码覆盖率--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">log</span> <span class="attribute">type</span>=<span class="value">"coverage-html"</span> <span class="attribute">target</span>=<span class="value">"./coverage-html"</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span></span></div><div class="line"><span class="attribute">highlight</span>=<span class="value">"false"</span> <span class="attribute">lowUpperBound</span>=<span class="value">"35"</span> <span class="attribute">highLowerBound</span>=<span class="value">"70"</span>/&gt;</div><div class="line"></div><div class="line">  <span class="comment">&lt;!--测试结果--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">log</span> <span class="attribute">type</span>=<span class="value">"testdox-html"</span> <span class="attribute">target</span>=<span class="value">"./coverage-html/test-result.html"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">logging</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Mockery">Mockery</h2>
+<p>Mockery是一个PHP mock 对象框架</p>
+<blockquote>
+<p><a href="https://github.com/padraic/mockery" target="_blank" rel="external">https://github.com/padraic/mockery</a></p>
+</blockquote>
+<h2 id="延伸阅读">延伸阅读</h2>
+<h3 id="PHP代码探测器检查编码标准">PHP代码探测器检查编码标准</h3>
+<p>PHP CodeSniffer  </p>
+<blockquote>
+<p><a href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="external">https://github.com/squizlabs/PHP_CodeSniffer</a><br>PHP_CodeSniffer自带有多个编码标准，也可自定义标准<br>查看PHP_CodeSniffer中已经安装的编码标准</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[vagrant<span class="property">@homestead</span> laravel-TDD]$ ./vendor/bin/phpcs -i</div><div class="line">The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz <span class="keyword">and</span> Zend</div><div class="line"></div><div class="line"><span class="regexp">//</span>使用自定义的标准</div><div class="line">phpcs --standard=Custom-coding-standard<span class="regexp">/Custom/</span></div></pre></td></tr></table></figure>
+
+<h3 id="PHPDocumentor">PHPDocumentor</h3>
+<p>是一个用PHP写的工具，用于生成类似javaDoc样式的API文档。</p>
+<blockquote>
+<p><a href="http://www.phpdoc.org/" target="_blank" rel="external">http://www.phpdoc.org/</a></p>
+</blockquote>
+<h3 id="PHP-FIG">PHP-FIG</h3>
+<p>什么是PHP-FIG?<br>框架互操作组(即PHP标准组)发布了一系列推荐风格。其中有部分是关于代码风格的，即PSR-0，PSR-1，PSR-2和PSR-4。这些推荐仅是一些被其它项目所遵循的规则，如Laravel, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium等，你可以把这些规则用在自己的项目中，或者继续使用你自己的风格。</p>
+<p><code>PSR-0 (Autoloading Standard)</code> 自动加载规范<br><code>PSR-1 (Basic Coding Standard)</code> 基本代码规范<br><code>PSR-2 (Coding Style Guide)</code> 代码风格规范<br><code>PSR-3 (Logger Interface)</code> 日志接口  </p>
+<blockquote>
+<p><a href="http://www.php-fig.org" target="_blank" rel="external">PHP-FIG</a></p>
+</blockquote>
+<h3 id="PHP_the_right_way_(PHP之道)">PHP the right way (PHP之道)</h3>
+<blockquote>
+<p><a href="http://www.phptherightway.com/" target="_blank" rel="external">http://www.phptherightway.com/</a></p>
+</blockquote>
+<p>PHP之道网站的目标就是搜集PHP最佳实践、编码规范和网络上的权威学习指南，给PHP学习者提供一个易于阅读，快速查找的入口。</p>
+<h3 id="关于本文">关于本文</h3>
+<p>采用Markdown文件格式编写,Markdown是一个轻量级标记语言</p>
+<p>工具：</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/12/20/php-TDD开发/" data-id="krw4ido6mdfw9wcl" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试驱动开发-TDD-php/">测试驱动开发 TDD php</a></li></ul>
+
+    </footer>
+  </div>
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-05-21T07:40:25.000Z"><a href="/2014/05/21/about-this-blog/">5月 21 2014</a></time>
-      
-      
+</article>
+
+
   
-    <h1 class="title"><a href="/2014/05/21/about-this-blog/">关于为什么要写博客</a></h1>
+    <article id="post-Laravel/filter" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/31/Laravel/filter/" class="article-date">
+  <time datetime="2014-10-31T07:45:11.000Z" itemprop="datePublished">10月 31 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/31/Laravel/filter/">Lavavel过滤器</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="过滤器">过滤器</h1>
+<h2 id="基础过滤器">基础过滤器</h2>
+<p>定义过滤器：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/filters.php</span></div><div class="line">Route::filter(<span class="string">'birthday'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (date(<span class="string">'d/m'</span>) == <span class="string">'12/12'</span>)</div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> View::make(<span class="string">'birthday'</span>);</div><div class="line">    }</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>路由中的调用方法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/'</span>, <span class="keyword">array</span>(</div><div class="line">    <span class="string">'before'</span> =&gt; <span class="string">'birthday'</span>,</div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> View::make(<span class="string">'hello'</span>);</div><div class="line">    }</div><div class="line">));</div></pre></td></tr></table></figure>
+
+<h2 id="多重过滤">多重过滤</h2>
+<p>采用“|”分隔，或数组定义</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/'</span>, <span class="keyword">array</span>(</div><div class="line">    <span class="string">'before'</span> =&gt; <span class="string">'birthday|christmas'</span>,</div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> View::make(<span class="string">'hello'</span>);</div><div class="line">    }</div><div class="line">));</div><div class="line"> </div><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/'</span>, <span class="keyword">array</span>(</div><div class="line">    <span class="string">'before'</span> =&gt; <span class="keyword">array</span>(<span class="string">'birthday'</span>, <span class="string">'christmas'</span>),</div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> View::make(<span class="string">'hello'</span>);</div><div class="line">    }</div><div class="line">));</div></pre></td></tr></table></figure>
+
+<h2 id="过滤器参数">过滤器参数</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/filters.php</span></div><div class="line"><span class="comment">// before 前置过滤器</span></div><div class="line">Route::filter(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$route</span>, <span class="variable">$request</span>)</span></span></div><div class="line">{</div><div class="line">});</div><div class="line"><span class="comment">// after 后置过滤器</span></div><div class="line">Route::filter(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$route</span>, <span class="variable">$request</span>, <span class="variable">$response</span>)</span></span></div><div class="line">{</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>向过滤器中传递额外的参数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/'</span>, <span class="keyword">array</span>(</div><div class="line">    <span class="string">'before'</span> =&gt; <span class="string">'birthday:foo,bar,baz'</span>,</div><div class="line">    <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> View::make(<span class="string">'hello'</span>);</div><div class="line">    }</div><div class="line">));</div><div class="line"> </div><div class="line"><span class="comment">// app/filters.php</span></div><div class="line">Route::filter(<span class="string">'birthday'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$route</span>, <span class="variable">$request</span>, <span class="variable">$first</span>, <span class="variable">$second</span>, <span class="variable">$third</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">"{$first} - {$second} - {$third}"</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<h2 id="使用类文件来作为过滤器">使用类文件来作为过滤器</h2>
+<p>首先确保已经 注册 laravel 的类加载目录</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// app/start/global.php</div><div class="line">ClassLoader::addDirectories(array(</div><div class="line">    <span class="keyword">...</span></div><div class="line">    app_path().<span class="string">'/filters'</span>,  //  如需使用过滤器类，请添加</div><div class="line">    <span class="keyword">...</span></div><div class="line">));</div></pre></td></tr></table></figure>
+
+<p>接着定义过滤器类文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// app/filters/Birthday.php</div><div class="line">class BirthdayFilter {</div><div class="line">    <span class="keyword">...</span></div><div class="line">    public <span class="keyword">function</span> filter($route, $request, $date)</div><div class="line">    {</div><div class="line">        <span class="keyword">if</span> (date(<span class="string">'d/m'</span>) == $date)</div><div class="line">        {</div><div class="line">            <span class="keyword">return</span> View::make(<span class="string">'birthday'</span>);</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">...</span></div><div class="line">}</div><div class="line"></div><div class="line">// app/routes.php</div><div class="line">Route::filter(<span class="string">'birthday'</span>, <span class="string">'BirthdayFilter'</span>);</div></pre></td></tr></table></figure>
+
+<p>注意： 最终执行的是类中的 filter() 方法，并且新定义的类需要执行一次 php artisan dump-autoload 指令以帮助其载入。</p>
+<h2 id="全局过滤器">全局过滤器</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/filters.php</span></div><div class="line">App::before(<span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$request</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="comment">//</span></div><div class="line">});</div><div class="line">App::after(<span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$request</span>, <span class="variable">$response</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="comment">//</span></div><div class="line">});</div></pre></td></tr></table></figure>
+
+<h2 id="模式过滤器">模式过滤器</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route<span class="value">::<span class="function">when</span>(<span class="string">'profile/*'</span>, <span class="string">'birthday'</span>);</span></div></pre></td></tr></table></figure>
+
+<p>以上代码将匹配所有 profile/ 开头的路由，来使用 birthday 作为前置过滤器。<br>还可以针对 HTTP 请求类型 限定模式过滤器：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Route<span class="value">::<span class="function">when</span>(<span class="string">'admin/*'</span>, <span class="string">'admin'</span>, <span class="function">array</span>(<span class="string">'post'</span>));</span></div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/10/31/Laravel/filter/" data-id="6exbch5hgo2gu2ah" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Laravel/route" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/31/Laravel/route/" class="article-date">
+  <time datetime="2014-10-31T07:45:11.000Z" itemprop="datePublished">10月 31 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/31/Laravel/route/">Lavavel路由</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="路由">路由</h1>
+<ul>
+<li><a href="#basic">基础路由</a>  </li>
+<li><a href="#type">路由类型</a>  </li>
+<li><a href="#closure">匿名函数</a>  </li>
+<li><a href="#parameter">路由参数</a>  <ul>
+<li><a href="#must">必填参数</a>  </li>
+<li><a href="#notmust">可选参数</a>  </li>
+</ul>
+</li>
+</ul>
+<p><a name="basic"></a></p>
+<h2 id="基础路由">基础路由</h2>
+<p>URL 地址：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="comment">//mydomain.app/my/page</span></div></pre></td></tr></table></figure>
+
+<p>对应的路由设置：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'my/page'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">'Hello world!'</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p><a name="type"></a></p>
+<h2 id="路由类型">路由类型</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Route<span class="value">::<span class="function">get</span>();</span></div><div class="line">Route<span class="value">::<span class="function">post</span>();</span></div><div class="line">Route<span class="value">::<span class="function">put</span>();</span></div><div class="line">Route<span class="value">::<span class="function">delete</span>();</span></div><div class="line">Route<span class="value">::<span class="function">any</span>();</span></div></pre></td></tr></table></figure>
+
+<p>分别对应 GET(查看) POST(新增) PUT(修改) DELETE(删除) 这4种URL请求类型。<br>而 <code>Route::any();</code> 则是包含了以上4种请求类型。</p>
+<p><a name="closure"></a></p>
+<h2 id="匿名函数">匿名函数</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line"><span class="variable">$logic</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">'Hello world!'</span>;</div><div class="line">}</div><div class="line">Route::get(<span class="string">'my/page'</span>, <span class="variable">$logic</span>);</div></pre></td></tr></table></figure>
+
+<p><a name="parameter"></a></p>
+<h2 id="路由参数">路由参数</h2>
+<p><a name="must"></a></p>
+<h3 id="必填参数">必填参数</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/books/{genre}'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$genre</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">"Books in the {$genre} category."</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>以上路由指向 <a href="http://mydomain.app/books/crime" target="_blank" rel="external">http://mydomain.app/books/crime</a> 并且地址中 $genre 参数必须存在。</p>
+<p><a name="notmust"></a></p>
+<h3 id="可选参数">可选参数</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line"><span class="comment">// routes for the books section</span></div><div class="line">Route::get(<span class="string">'/books/{genre?}'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$genre</span> = <span class="string">'Crime'</span>)</span></span></div><div class="line">{</div><div class="line"><span class="keyword">return</span> <span class="string">"Books in the {$genre} category."</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>此时 <a href="http://mydomain.app/books/" target="_blank" rel="external">http://mydomain.app/books/</a> 也指向这个路由，并使用默认值 Crime。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/10/31/Laravel/route/" data-id="thpzkj6z579zoq99" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Laravel/Responses" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/31/Laravel/Responses/" class="article-date">
+  <time datetime="2014-10-31T07:45:11.000Z" itemprop="datePublished">10月 31 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/31/Laravel/Responses/">Lavavel Responses</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="响应">响应</h1>
+<h2 id="视图响应">视图响应</h2>
+<p>模板文件：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></div><div class="line"><span class="doctype">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Views!<span class="tag">&lt;/<span class="title">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Oh yeah! VIEWS!<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>路由定义：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> View::make(<span class="string">'simple'</span>);</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<h3 id="向视图中传递数据">向视图中传递数据</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Route::get('/{squirrel}', function($squirrel)</div><div class="line">{</div><div class="line">    $data['squirrel'] = $squirrel;</div><div class="line">    return View::make('simple', $data);</div><div class="line">});</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- app/views/simple.php --&gt;</span></div><div class="line"><span class="doctype">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Squirrels<span class="tag">&lt;/<span class="title">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>I wish I were a <span class="php"><span class="preprocessor">&lt;?php</span> <span class="keyword">echo</span> <span class="variable">$squirrel</span>; <span class="preprocessor">?&gt;</span></span> squirrel!<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>重定向</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'first'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> Redirect::to(<span class="string">'second'</span>);</div><div class="line">});</div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'second'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">'Second route.'</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>重定向在用户认证中的应用</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'books'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (Auth::guest()) <span class="keyword">return</span> Redirect::to(<span class="string">'login'</span>);</div><div class="line">    <span class="comment">// Show books to only logged in users.</span></div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>可定制的服务器响应</p>
+<p>定制响应的“头信息”</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'markdown/response'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="variable">$response</span> = Response::make(<span class="string">'***some bold text***'</span>, <span class="number">200</span>);</div><div class="line">    <span class="variable">$response</span><span class="variable">-&gt;headers</span><span class="variable">-&gt;set</span>(<span class="string">'Content-Type'</span>, <span class="string">'text/x-markdown'</span>);</div><div class="line">    <span class="keyword">return</span> <span class="variable">$response</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>定制响应的“存活时间”</p>
+<p>存活时间 Time-to-live 这个时间以秒为单位，它是数据包可以生存的时间。在传输中，如果超过了这个时间，这个数据报就被认为丢失了，或在一个循环内并且被废弃。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'our/response'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="variable">$response</span> = Response::make(<span class="string">'Bond, James Bond.'</span>, <span class="number">200</span>);</div><div class="line">    <span class="variable">$response</span><span class="variable">-&gt;setTtl</span>(<span class="number">60</span>);</div><div class="line">    <span class="keyword">return</span> <span class="variable">$response</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>Response 的 API</p>
+<blockquote>
+<p><a href="http://api.symfony.com/2.2/Symfony/Component/HttpFoundation/Response.html" target="_blank" rel="external">TheSymfonyResponseObject</a></p>
+</blockquote>
+<p>Respanse 的快捷方法</p>
+<p>JSON 响应</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route<span class="value">::<span class="function">get</span>(<span class="string">'markdown/response'</span>, <span class="function">function</span>()</span></div><div class="line">{</div><div class="line">    <span class="variable">$data</span> = <span class="function">array</span>(<span class="string">'iron'</span>, <span class="string">'man'</span>, <span class="string">'rocks'</span>);</div><div class="line">    return Response<span class="value">::<span class="function">json</span>(<span class="variable">$data</span>);</span></div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>浏览器将输出 <code>[&quot;iron&quot;,&quot;man&quot;,&quot;rocks&quot;]</code></p>
+<p>下载 响应</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route<span class="value">::<span class="function">get</span>(<span class="string">'file/download'</span>, <span class="function">function</span>()</span></div><div class="line">{</div><div class="line">    <span class="variable">$file</span> = <span class="string">'path_to_my_file.pdf'</span>;</div><div class="line">    return Response<span class="value">::<span class="function">download</span>(<span class="variable">$file</span>);</span></div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>可定制 HTTP 状态码、头信息</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route<span class="value">::<span class="function">get</span>(<span class="string">'file/download'</span>, <span class="function">function</span>()</span></div><div class="line">{</div><div class="line">    <span class="variable">$file</span> = <span class="string">'path_to_my_file.pdf'</span>;</div><div class="line">    return Response<span class="value">::<span class="function">download</span>(<span class="variable">$file</span>, <span class="number">418</span>, <span class="function">array</span>(<span class="string">'iron'</span>, <span class="string">'man'</span>));</span></div><div class="line">});</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/10/31/Laravel/Responses/" data-id="1n343u1u8t9ili35" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-about-this-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/05/21/about-this-blog/" class="article-date">
+  <time datetime="2012-05-21T07:40:25.000Z" itemprop="datePublished">5月 21 2012</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/05/21/about-this-blog/">关于为什么要写博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <p>经常在网上看别人的博客，由于自己比较懒没有坚持写博客 只是零星的在新浪博客、百度空间、博客园写了一些技术方面的 并且很多还都是转载<br>还有一个原因就是对这些博客的写作方式都不满意，当我看到markdown语法的时候发现，这么简洁的语法非常适合我，于是又开始了我的blog</p>
 <p>以下是比较喜欢的blog<br><a href="http://coolshell.cn/" target="_blank" rel="external">http://coolshell.cn/</a> （酷壳）<br><a href="http://beyondvincent.com/（破船之家）" target="_blank" rel="external">http://beyondvincent.com/（破船之家）</a><br><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="external">http://www.ruanyifeng.com/blog/</a> (阮一峰)</p>
@@ -157,34 +612,44 @@
 
       
     </div>
-    <footer>
+    <footer class="article-footer">
       
-        
-        
+        <a data-url="http://taoanton.github.io/2012/05/21/about-this-blog/" data-id="qvs5uvfp4qqnhs0e" class="article-share-link" data-share="baidu">分享到</a>
       
-      <div class="clearfix"></div>
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/taoanton的博客/">taoanton的博客</a></li></ul>
+
     </footer>
   </div>
+  
 </article>
 
 
-
-
-  <article class="post">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2011-12-31T07:45:11.000Z"><a href="/2011/12/31/about-me/">12月 31 2011</a></time>
-      
-      
+    <article id="post-about-me" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/12/31/about-me/" class="article-date">
+  <time datetime="2011-12-31T07:45:11.000Z" itemprop="datePublished">12月 31 2011</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 class="title"><a href="/2011/12/31/about-me/">关于我</a></h1>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/12/31/about-me/">关于我</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <p>没读过几年书 误打误撞的进入的程序员这个队伍 开始从事软件开发多年<br>一直以来却做着“简单”的东西 没做过什么“大型”项目也就不写了</p>
 <h2 id="Email">Email</h2>
@@ -194,59 +659,150 @@
 
       
     </div>
-    <footer>
+    <footer class="article-footer">
       
-        
-        
+        <a data-url="http://taoanton.github.io/2011/12/31/about-me/" data-id="41oqfrhe0ivu9ahf" class="article-share-link" data-share="baidu">分享到</a>
       
-      <div class="clearfix"></div>
+
+      
+
+      
     </footer>
   </div>
+  
 </article>
 
 
-
-
-
-<nav id="pagination">
   
   
-  <div class="clearfix"></div>
-</nav></div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:taoanton.github.io">
-  </form>
-</div>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer-satis/">composer satis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/taoanton的博客/">taoanton的博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试驱动开发-TDD-php/">测试驱动开发 TDD php</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
 
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/composer-satis/" style="font-size: 20.00px;">composer satis</a><a href="/tags/composer-satis/" style="font-size: 10.00px;">composer,satis</a><a href="/tags/taoanton的博客/" style="font-size: 20.00px;">taoanton的博客</a><a href="/tags/测试驱动开发-TDD-php/" style="font-size: 20.00px;">测试驱动开发 TDD php</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12/">December 2011</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/01/12/satis-config/">利用satis配置私有包</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/20/php-TDD开发/">PHP测试驱动开发</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/31/Laravel/filter/">Lavavel过滤器</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/31/Laravel/route/">Lavavel路由</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/31/Laravel/Responses/">Lavavel Responses</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
 
   
 </aside>
-    <div class="clearfix"></div>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 taoanton<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
   </div>
-  <footer id="footer" class="inner"><div class="alignleft">
+</footer>
+  </div>
+  <nav id="mobile-nav">
   
-  &copy; 2014 taoanton
+    <a href="/" class="mobile-nav-link">Home</a>
   
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 </div>
-<div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+
+<!-- totop end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"nocss.css"}};with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+<script src="/js/script.js" type="text/javascript"></script>
 
+
+</div>
 </body>
 </html>
