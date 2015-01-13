@@ -74,36 +74,6 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-php/php-development" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/13/php/php-development/" class="article-date">
-  <time datetime="2015-01-13T08:16:17.000Z" itemprop="datePublished">1月 13 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://taoanton.github.io/2015/01/13/php/php-development/" data-id="gxp30q2dqcvtvhyy" class="article-share-link" data-share="baidu">分享到</a>
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-php/satis-config" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/12/php/satis-config/" class="article-date">
@@ -168,6 +138,93 @@
 
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer-satis/">composer satis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-php/php-development" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/20/php/php-development/" class="article-date">
+  <time datetime="2014-12-20T07:45:11.000Z" itemprop="datePublished">12月 20 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/20/php/php-development/">PHP开发相关</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="phpCodeSniffer"></a></p>
+<h3 id="PHP代码探测器检查编码标准">PHP代码探测器检查编码标准</h3>
+<p>PHP_CodeSniffer是PEAR中的一个用PHP5写的用来检查嗅探PHP代码是否有违反一组预先设置好的编码标准的一个包，它是确保你的代码简洁一致的必不可少的开发工具，甚至还可以帮助程序员减少一些语义错误。</p>
+<blockquote>
+<p><a href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="external">https://github.com/squizlabs/PHP_CodeSniffer</a></p>
+</blockquote>
+<p>PHP_CodeSniffer自带有多个编码标准，也可自定义标准<br>查看PHP_CodeSniffer中已经安装的编码标准</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./vendor/bin/phpcs -i</div><div class="line"><span class="variable">The</span> installed coding standards are <span class="variable">MySource</span>, <span class="variable">PEAR</span>, <span class="variable">PHPCS</span>, <span class="variable">PSR1</span>, <span class="variable">PSR2</span>, <span class="variable">Squiz</span> <span class="keyword">and</span> <span class="variable">Zend</span></div></pre></td></tr></table></figure>
+
+<p>使用自定义的标准</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.<span class="regexp">/vendor/</span>bin<span class="regexp">/phpcs --standard=LaravelCodeSniffer/</span>Standards<span class="regexp">/Laravel/</span> app<span class="regexp">/controllers/</span></div></pre></td></tr></table></figure>
+
+<p><a name="phpDocumentor"></a></p>
+<h3 id="PHPDocumentor">PHPDocumentor</h3>
+<p>是一个用PHP写的工具，用于生成类似javaDoc样式的API文档。</p>
+<blockquote>
+<p><a href="http://www.phpdoc.org/" target="_blank" rel="external">http://www.phpdoc.org/</a></p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./phpDocumentor.phar <span class="operator">-d</span> app/controllers -t PHPDocumentor</div></pre></td></tr></table></figure>
+
+<p><a name="php-fig"></a></p>
+<h3 id="PHP-FIG">PHP-FIG</h3>
+<p>什么是PHP-FIG?<br>框架互操作组(即PHP标准组)发布了一系列推荐风格。其中有部分是关于代码风格的，即PSR-0，PSR-1，PSR-2和PSR-4。这些推荐仅是一些被其它项目所遵循的规则，如Laravel, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium等，你可以把这些规则用在自己的项目中，或者继续使用你自己的风格。</p>
+<p><code>PSR-0 (Autoloading Standard)</code> 自动加载规范<br><code>PSR-1 (Basic Coding Standard)</code> 基本代码规范<br><code>PSR-2 (Coding Style Guide)</code> 代码风格规范<br><code>PSR-3 (Logger Interface)</code> 日志接口  </p>
+<blockquote>
+<p><a href="http://www.php-fig.org" target="_blank" rel="external">PHP-FIG</a></p>
+</blockquote>
+<p><a name="phptherightway"></a></p>
+<h3 id="PHP_the_right_way_(PHP之道)">PHP the right way (PHP之道)</h3>
+<blockquote>
+<p><a href="http://www.phptherightway.com/" target="_blank" rel="external">http://www.phptherightway.com/</a></p>
+</blockquote>
+<p>PHP之道网站的目标就是搜集PHP最佳实践、编码规范和网络上的权威学习指南，给PHP学习者提供一个易于阅读，快速查找的入口。</p>
+<h3 id="关于本文">关于本文</h3>
+<p>采用Markdown文件格式编写,Markdown是一个轻量级标记语言<br>Markdown 的理念是让文档更容易读、写和随意改。Markdown 是一种书写的格式，HTML 是一种发布的格式<br>工具：</p>
+<blockquote>
+<ul>
+<li>Sublime Text 2</li>
+<li>MarkdownPad</li>
+</ul>
+</blockquote>
+<p>语法参考</p>
+<blockquote>
+<p><a href="http://www.jianshu.com/collection/BDu5F8" target="_blank" rel="external">http://www.jianshu.com/collection/BDu5F8</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/12/20/php/php-development/" data-id="gxp30q2dqcvtvhyy" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP开发-phpCodeSniffer-phpDocumentor/">PHP开发 phpCodeSniffer phpDocumentor</a></li></ul>
 
     </footer>
   </div>
@@ -708,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer-satis/">composer satis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/taoanton的博客/">taoanton的博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试驱动开发-TDD-php/">测试驱动开发 TDD php</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP开发-phpCodeSniffer-phpDocumentor/">PHP开发 phpCodeSniffer phpDocumentor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer-satis/">composer satis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/taoanton的博客/">taoanton的博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试驱动开发-TDD-php/">测试驱动开发 TDD php</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -717,7 +774,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/composer-satis/" style="font-size: 20.00px;">composer satis</a><a href="/tags/composer-satis/" style="font-size: 10.00px;">composer,satis</a><a href="/tags/taoanton的博客/" style="font-size: 20.00px;">taoanton的博客</a><a href="/tags/测试驱动开发-TDD-php/" style="font-size: 20.00px;">测试驱动开发 TDD php</a>
+      <a href="/tags/PHP开发-TDD-php/" style="font-size: 10.00px;">PHP开发 TDD php</a><a href="/tags/PHP开发-phpCodeSniffer/" style="font-size: 10.00px;">PHP开发 phpCodeSniffer</a><a href="/tags/PHP开发-phpCodeSniffer-phpDocumentor/" style="font-size: 20.00px;">PHP开发 phpCodeSniffer phpDocumentor</a><a href="/tags/composer-satis/" style="font-size: 20.00px;">composer satis</a><a href="/tags/composer-satis/" style="font-size: 10.00px;">composer,satis</a><a href="/tags/taoanton的博客/" style="font-size: 20.00px;">taoanton的博客</a><a href="/tags/测试驱动开发-TDD-php/" style="font-size: 20.00px;">测试驱动开发 TDD php</a>
     </div>
   </div>
 
@@ -726,7 +783,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12/">December 2011</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/12/">December 2011</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -738,11 +795,11 @@
       <ul>
         
           <li>
-            <a href="/2015/01/13/php/php-development/">(no title)</a>
+            <a href="/2015/01/12/php/satis-config/">利用satis配置私有包</a>
           </li>
         
           <li>
-            <a href="/2015/01/12/php/satis-config/">利用satis配置私有包</a>
+            <a href="/2014/12/20/php/php-development/">PHP开发相关</a>
           </li>
         
           <li>

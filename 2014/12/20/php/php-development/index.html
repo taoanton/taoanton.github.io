@@ -4,17 +4,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: taoanton的博客 | taoanton&#39;s blog</title>
+  <title>PHP开发相关 | taoanton&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Write something">
-<meta property="og:type" content="website">
-<meta property="og:title" content="taoanton's blog">
-<meta property="og:url" content="http://taoanton.github.io/tags/taoanton的博客/">
+  <meta name="description" content="PHP代码探测器检查编码标准
+PHP_CodeSniffer是PEAR中的一个用PHP5写的用来检查嗅探PHP代码是否有违反一组预先设置好的编码标准的一个包，它是确保你的代码简洁一致的必不可少的开发工具，甚至还可以帮助程序员减少一些语义错误。
+
+https://github.com/squizlabs/PHP_CodeSniffer
+
+PHP_CodeSniffer自带有多个编码标准，也可自定义">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP开发相关">
+<meta property="og:url" content="http://taoanton.github.io/2014/12/20/php/php-development/">
 <meta property="og:site_name" content="taoanton's blog">
-<meta property="og:description" content="Write something">
+<meta property="og:description" content="PHP代码探测器检查编码标准
+PHP_CodeSniffer是PEAR中的一个用PHP5写的用来检查嗅探PHP代码是否有违反一组预先设置好的编码标准的一个包，它是确保你的代码简洁一致的必不可少的开发工具，甚至还可以帮助程序员减少一些语义错误。
+
+https://github.com/squizlabs/PHP_CodeSniffer
+
+PHP_CodeSniffer自带有多个编码标准，也可自定义">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="taoanton's blog">
-<meta name="twitter:description" content="Write something">
+<meta name="twitter:title" content="PHP开发相关">
+<meta name="twitter:description" content="PHP代码探测器检查编码标准
+PHP_CodeSniffer是PEAR中的一个用PHP5写的用来检查嗅探PHP代码是否有违反一组预先设置好的编码标准的一个包，它是确保你的代码简洁一致的必不可少的开发工具，甚至还可以帮助程序员减少一些语义错误。
+
+https://github.com/squizlabs/PHP_CodeSniffer
+
+PHP_CodeSniffer自带有多个编码标准，也可自定义">
 
   
     <link rel="alternative" href="/atom.xml" title="taoanton&#39;s blog" type="application/atom+xml">
@@ -72,39 +87,112 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2012" class="archive-year">2012</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2012/05/21/about-this-blog/" class="archive-article-date">
-  <time datetime="2012-05-21T07:40:25.000Z" itemprop="datePublished">5月 21</time>
+      <section id="main"><article id="post-php/php-development" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/20/php/php-development/" class="article-date">
+  <time datetime="2014-12-20T07:45:11.000Z" itemprop="datePublished">12月 20 2014</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2012/05/21/about-this-blog/">关于为什么要写博客</a>
+    <h1 class="article-title" itemprop="name">
+      PHP开发相关
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="phpCodeSniffer"></a></p>
+<h3 id="PHP代码探测器检查编码标准">PHP代码探测器检查编码标准</h3>
+<p>PHP_CodeSniffer是PEAR中的一个用PHP5写的用来检查嗅探PHP代码是否有违反一组预先设置好的编码标准的一个包，它是确保你的代码简洁一致的必不可少的开发工具，甚至还可以帮助程序员减少一些语义错误。</p>
+<blockquote>
+<p><a href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank" rel="external">https://github.com/squizlabs/PHP_CodeSniffer</a></p>
+</blockquote>
+<p>PHP_CodeSniffer自带有多个编码标准，也可自定义标准<br>查看PHP_CodeSniffer中已经安装的编码标准</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./vendor/bin/phpcs -i</div><div class="line"><span class="variable">The</span> installed coding standards are <span class="variable">MySource</span>, <span class="variable">PEAR</span>, <span class="variable">PHPCS</span>, <span class="variable">PSR1</span>, <span class="variable">PSR2</span>, <span class="variable">Squiz</span> <span class="keyword">and</span> <span class="variable">Zend</span></div></pre></td></tr></table></figure>
+
+<p>使用自定义的标准</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.<span class="regexp">/vendor/</span>bin<span class="regexp">/phpcs --standard=LaravelCodeSniffer/</span>Standards<span class="regexp">/Laravel/</span> app<span class="regexp">/controllers/</span></div></pre></td></tr></table></figure>
+
+<p><a name="phpDocumentor"></a></p>
+<h3 id="PHPDocumentor">PHPDocumentor</h3>
+<p>是一个用PHP写的工具，用于生成类似javaDoc样式的API文档。</p>
+<blockquote>
+<p><a href="http://www.phpdoc.org/" target="_blank" rel="external">http://www.phpdoc.org/</a></p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./phpDocumentor.phar <span class="operator">-d</span> app/controllers -t PHPDocumentor</div></pre></td></tr></table></figure>
+
+<p><a name="php-fig"></a></p>
+<h3 id="PHP-FIG">PHP-FIG</h3>
+<p>什么是PHP-FIG?<br>框架互操作组(即PHP标准组)发布了一系列推荐风格。其中有部分是关于代码风格的，即PSR-0，PSR-1，PSR-2和PSR-4。这些推荐仅是一些被其它项目所遵循的规则，如Laravel, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium等，你可以把这些规则用在自己的项目中，或者继续使用你自己的风格。</p>
+<p><code>PSR-0 (Autoloading Standard)</code> 自动加载规范<br><code>PSR-1 (Basic Coding Standard)</code> 基本代码规范<br><code>PSR-2 (Coding Style Guide)</code> 代码风格规范<br><code>PSR-3 (Logger Interface)</code> 日志接口  </p>
+<blockquote>
+<p><a href="http://www.php-fig.org" target="_blank" rel="external">PHP-FIG</a></p>
+</blockquote>
+<p><a name="phptherightway"></a></p>
+<h3 id="PHP_the_right_way_(PHP之道)">PHP the right way (PHP之道)</h3>
+<blockquote>
+<p><a href="http://www.phptherightway.com/" target="_blank" rel="external">http://www.phptherightway.com/</a></p>
+</blockquote>
+<p>PHP之道网站的目标就是搜集PHP最佳实践、编码规范和网络上的权威学习指南，给PHP学习者提供一个易于阅读，快速查找的入口。</p>
+<h3 id="关于本文">关于本文</h3>
+<p>采用Markdown文件格式编写,Markdown是一个轻量级标记语言<br>Markdown 的理念是让文档更容易读、写和随意改。Markdown 是一种书写的格式，HTML 是一种发布的格式<br>工具：</p>
+<blockquote>
+<ul>
+<li>Sublime Text 2</li>
+<li>MarkdownPad</li>
+</ul>
+</blockquote>
+<p>语法参考</p>
+<blockquote>
+<p><a href="http://www.jianshu.com/collection/BDu5F8" target="_blank" rel="external">http://www.jianshu.com/collection/BDu5F8</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://taoanton.github.io/2014/12/20/php/php-development/" data-id="gxp30q2dqcvtvhyy" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP开发-phpCodeSniffer-phpDocumentor/">PHP开发 phpCodeSniffer phpDocumentor</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/12/php/satis-config/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          利用satis配置私有包
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/20/php/php-TDD开发/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PHP测试驱动开发</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
       
       <aside id="sidebar">
