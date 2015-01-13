@@ -4,29 +4,80 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于我 | taoanton&#39;s blog</title>
+  <title>Lavavel路由 | taoanton&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="没读过几年书 误打误撞的进入的程序员这个队伍 开始从事软件开发多年一直以来却做着“简单”的东西 没做过什么“大型”项目也就不写了
-Email
-taoanton@gmail.com
-爱好
-运动跑步台球weblnamp/html5/javascriptmobileios/androidlanggo/nodejs/ruby">
+  <meta name="description" content="路由
+
+基础路由  
+路由类型  
+匿名函数  
+路由参数  
+必填参数  
+可选参数  
+
+
+
+
+基础路由
+URL 地址：
+1http://mydomain.app/my/page
+
+对应的路由设置：
+12345// app/routes.phpRoute::get('my/page', function(){    return 'Hello world!';});
+
+
+路由类型
+12345R">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://taoanton.github.io/2011/12/31/about-me/">
+<meta property="og:title" content="Lavavel路由">
+<meta property="og:url" content="http://taoanton.github.io/2014/10/31/Laravel/route/">
 <meta property="og:site_name" content="taoanton's blog">
-<meta property="og:description" content="没读过几年书 误打误撞的进入的程序员这个队伍 开始从事软件开发多年一直以来却做着“简单”的东西 没做过什么“大型”项目也就不写了
-Email
-taoanton@gmail.com
-爱好
-运动跑步台球weblnamp/html5/javascriptmobileios/androidlanggo/nodejs/ruby">
+<meta property="og:description" content="路由
+
+基础路由  
+路由类型  
+匿名函数  
+路由参数  
+必填参数  
+可选参数  
+
+
+
+
+基础路由
+URL 地址：
+1http://mydomain.app/my/page
+
+对应的路由设置：
+12345// app/routes.phpRoute::get('my/page', function(){    return 'Hello world!';});
+
+
+路由类型
+12345R">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="没读过几年书 误打误撞的进入的程序员这个队伍 开始从事软件开发多年一直以来却做着“简单”的东西 没做过什么“大型”项目也就不写了
-Email
-taoanton@gmail.com
-爱好
-运动跑步台球weblnamp/html5/javascriptmobileios/androidlanggo/nodejs/ruby">
+<meta name="twitter:title" content="Lavavel路由">
+<meta name="twitter:description" content="路由
+
+基础路由  
+路由类型  
+匿名函数  
+路由参数  
+必填参数  
+可选参数  
+
+
+
+
+基础路由
+URL 地址：
+1http://mydomain.app/my/page
+
+对应的路由设置：
+12345// app/routes.phpRoute::get('my/page', function(){    return 'Hello world!';});
+
+
+路由类型
+12345R">
 
   
     <link rel="alternative" href="/atom.xml" title="taoanton&#39;s blog" type="application/atom+xml">
@@ -84,10 +135,10 @@ taoanton@gmail.com
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-about-me" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Laravel/route" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2011/12/31/about-me/" class="article-date">
-  <time datetime="2011-12-31T07:45:11.000Z" itemprop="datePublished">12月 31 2011</time>
+    <a href="/2014/10/31/Laravel/route/" class="article-date">
+  <time datetime="2014-10-31T07:45:11.000Z" itemprop="datePublished">10月 31 2014</time>
 </a>
     
   </div>
@@ -98,7 +149,7 @@ taoanton@gmail.com
         
   
     <h1 class="article-title" itemprop="name">
-      关于我
+      Lavavel路由
     </h1>
   
 
@@ -106,17 +157,52 @@ taoanton@gmail.com
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>没读过几年书 误打误撞的进入的程序员这个队伍 开始从事软件开发多年<br>一直以来却做着“简单”的东西 没做过什么“大型”项目也就不写了</p>
-<h2 id="Email">Email</h2>
-<p>taoanton@gmail.com</p>
-<h2 id="爱好">爱好</h2>
-<p><code>运动</code>跑步台球<br><code>web</code>lnamp/html5/javascript<br><code>mobile</code>ios/android<br><code>lang</code>go/nodejs/ruby  </p>
+        <h1 id="路由">路由</h1>
+<ul>
+<li><a href="#basic">基础路由</a>  </li>
+<li><a href="#type">路由类型</a>  </li>
+<li><a href="#closure">匿名函数</a>  </li>
+<li><a href="#parameter">路由参数</a>  <ul>
+<li><a href="#must">必填参数</a>  </li>
+<li><a href="#notmust">可选参数</a>  </li>
+</ul>
+</li>
+</ul>
+<p><a name="basic"></a></p>
+<h2 id="基础路由">基础路由</h2>
+<p>URL 地址：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="comment">//mydomain.app/my/page</span></div></pre></td></tr></table></figure>
+
+<p>对应的路由设置：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::<span class="keyword">get</span>(<span class="string">'my/page'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">'Hello world!'</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p><a name="type"></a></p>
+<h2 id="路由类型">路由类型</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Route<span class="value">::<span class="function">get</span>();</span></div><div class="line">Route<span class="value">::<span class="function">post</span>();</span></div><div class="line">Route<span class="value">::<span class="function">put</span>();</span></div><div class="line">Route<span class="value">::<span class="function">delete</span>();</span></div><div class="line">Route<span class="value">::<span class="function">any</span>();</span></div></pre></td></tr></table></figure>
+
+<p>分别对应 GET(查看) POST(新增) PUT(修改) DELETE(删除) 这4种URL请求类型。<br>而 <code>Route::any();</code> 则是包含了以上4种请求类型。</p>
+<p><a name="closure"></a></p>
+<h2 id="匿名函数">匿名函数</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line"><span class="variable">$logic</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">'Hello world!'</span>;</div><div class="line">}</div><div class="line">Route::get(<span class="string">'my/page'</span>, <span class="variable">$logic</span>);</div></pre></td></tr></table></figure>
+
+<p><a name="parameter"></a></p>
+<h2 id="路由参数">路由参数</h2>
+<p><a name="must"></a></p>
+<h3 id="必填参数">必填参数</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line">Route::get(<span class="string">'/books/{genre}'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$genre</span>)</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">return</span> <span class="string">"Books in the {$genre} category."</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>以上路由指向 <a href="http://mydomain.app/books/crime" target="_blank" rel="external">http://mydomain.app/books/crime</a> 并且地址中 $genre 参数必须存在。</p>
+<p><a name="notmust"></a></p>
+<h3 id="可选参数">可选参数</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app/routes.php</span></div><div class="line"><span class="comment">// routes for the books section</span></div><div class="line">Route::get(<span class="string">'/books/{genre?}'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$genre</span> = <span class="string">'Crime'</span>)</span></span></div><div class="line">{</div><div class="line"><span class="keyword">return</span> <span class="string">"Books in the {$genre} category."</span>;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>此时 <a href="http://mydomain.app/books/" target="_blank" rel="external">http://mydomain.app/books/</a> 也指向这个路由，并使用默认值 Crime。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://taoanton.github.io/2011/12/31/about-me/" data-id="41oqfrhe0ivu9ahf" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://taoanton.github.io/2014/10/31/Laravel/route/" data-id="thpzkj6z579zoq99" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -128,15 +214,20 @@ taoanton@gmail.com
     
 <nav id="article-nav">
   
-    <a href="/2012/05/21/about-this-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/10/31/Laravel/filter/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          关于为什么要写博客
+          Lavavel过滤器
         
       </div>
     </a>
   
+  
+    <a href="/2014/10/31/Laravel/Responses/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Lavavel Responses</div>
+    </a>
   
 </nav>
 
