@@ -90,3 +90,6 @@ php1/2/3 lab123123
 
 vagrant user
 php1/2/3  123123
+
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow
