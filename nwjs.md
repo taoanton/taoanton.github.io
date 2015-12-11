@@ -11,6 +11,7 @@ NW.js 是基于 `Chromium` 和 `Node.js` 运行的， 以前也叫Node-Webkit。
 下载地址：
 > http://nwjs.io/
 
+
 新建配置文件`package.json`  
 
 ```
@@ -46,7 +47,7 @@ src/
 //mac可通过nwjs执行文件运行
 ./nwjs nwtest.nw
 ```
-打包可执行文件
+**打包可执行文件**  
 mac osx可以修改`nwtest.nw`打开方式，使用`nwjs.app`打开，
 或者拷贝应用程序里的`nwjs.app`，重命名为`nwtest.app`,右键`显示报内容`，拷贝nwtest.nw到`Contents/Resources`目录，
 此时就可以当做一个双击运行应用了。
