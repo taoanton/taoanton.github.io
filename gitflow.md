@@ -1,7 +1,4 @@
 
-### Git使用规范
-团队开发中，遵循一个合理、清晰的Git使用流程，是非常重要的。
-否则，每个人都提交一堆杂乱无章的commit，项目很快就会变得难以协调和维护。
 
 #### 分支管理策略
 master用于正式发布，develop用于日常开发。
@@ -17,7 +14,7 @@ master分支中保留完全稳定的代码，即已经发布的代码，这是�
 **开发分支 develop**
 开发中用到的分支，开发人员开发完的某个功能，向develop分支发起合并请求。develop也是受保护的分支，开发人员不允许push代码。
 
-("./images/02.svg")
+<img src="./images/02.svg">
 
 **功能分支 feature**
 每个新功能位于一个新的分支，这样可以push到远程服务器以备份和协作。功能分支不是从master分支上fork出的分支，而是从develop上fork出的分支。当新功能开发完成时，合并回develop分支。命名方式：feature-功能名称或开发人员名-功能名称。
@@ -81,3 +78,5 @@ git merge --no-ff <branchname>
 //推送到远端服务器
 git push origin develop
 ```
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/

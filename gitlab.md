@@ -26,6 +26,8 @@ nginx配置文件
 `/var/opt/gitlab/nginx`
 git版本库地址
 `/var/opt/gitlab/git-data`
+log
+`/var/log/gitlab`
 
 收费版和免费版比较
 `https://about.gitlab.com/features/#compare`
@@ -85,11 +87,72 @@ gitlab command line tools
 
 ## 本地测试环境用户
 gitlab user
-root   lab123123
+root   lab123123    
 php1/2/3 lab123123
 
 vagrant user
 php1/2/3  123123
 
+##源码安装
+login.........root
+password......5iveL!fe
+###检测应用程序状态
+bundle exec rake gitlab:env:info RAILS_ENV=production
+
+###编译
+bundle exec rake assets:precompile RAILS_ENV=production
+
+###查看应用更加详细的信息
+bundle exec rake gitlab:check RAILS_ENV=production
+
+修改邮箱设置
+bundle exec rake gitlab:incoming_email:check RAILS_ENV=production
+
+
+System information
+System:
+Current User:   git
+Using RVM:  no
+Ruby Version:   2.1.7p400
+Gem Version:    2.2.5
+Bundler Version:1.10.6
+Rake Version:   10.4.2
+Sidekiq Version:3.3.0
+
+GitLab information
+Version:    8.1.4
+Revision:   fatal: Not a git repository (or any of the parent directories): .git
+Directory:  /home/git/gitlab
+DB Adapter: mysql2
+URL:        http://gitlab.maxrocky.com
+HTTP Clone URL: http://gitlab.maxrocky.com/some-group/some-project.git
+SSH Clone URL:  git@gitlab.maxrocky.com:some-group/some-project.git
+Using LDAP: no
+Using Omniauth: no
+
+GitLab Shell
+Version:    2.6.5
+Repositories:   /home/git/repositories/
+Hooks:      /home/git/gitlab-shell/hooks/
+Git:        /usr/bin/git检测应用程序状态
 
 https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow
+
+删除错误日志
+Started DELETE "/wangtao/111" for 127.0.0.1 at 2015-12-01 05:42:15 +0000
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "namespace_id"=>"wangtao", "id"=>"111"}
+Completed 500 Internal Server Error in 1683ms (ActiveRecord: 78.3ms)
+
+NoMethodError (undefined method `include?' for nil:NilClass):
+  app/controllers/projects_controller.rb:113:in `destroy'
+
+
+  Started DELETE "/php/test-php2" for 127.0.0.1 at 2015-12-01 05:46:32 +0000
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "namespace_id"=>"php", "id"=>"test-php2"}
+Completed 500 Internal Server Error in 1474ms (ActiveRecord: 39.2ms)
+
+NoMethodError (undefined method `include?' for nil:NilClass):
+  app/controllers/projects_controller.rb:113:in `destroy'
+
